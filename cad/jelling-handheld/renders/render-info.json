@@ -1,0 +1,127 @@
+{
+  "source": "output/jelling_DRAFT.step",
+  "source_sha256": "c136ebf3116121d306026455f71f0015e7a4ca4efaf98a2ff2a65aa25bfeae7a",
+  "note": "Studio render finish and lighting are illustrative. CAD geometry is unchanged. PCB references are simplified; buzzer is an XY footprint only.",
+  "renderer": "Mitsuba 3 / CPU path tracing",
+  "samples_per_pixel": 48,
+  "denoising": "Open Image Denoise / CPU",
+  "files": [
+    "01_hero.png",
+    "02_top.png",
+    "03_rear_quarter.png",
+    "04_exploded.png",
+    "05_internal_supports.png"
+  ],
+  "views": {
+    "01_hero": {
+      "origin": [
+        0.27,
+        -0.34,
+        0.36
+      ],
+      "target": [
+        0,
+        0,
+        0.014
+      ],
+      "up": [
+        0,
+        0,
+        1
+      ],
+      "fov": 30,
+      "width": 2000,
+      "height": 1600,
+      "mode": "assembled"
+    },
+    "02_top": {
+      "origin": [
+        0,
+        0,
+        0.5
+      ],
+      "target": [
+        0,
+        0,
+        0.01
+      ],
+      "up": [
+        0,
+        1,
+        0
+      ],
+      "fov": 28,
+      "width": 1600,
+      "height": 2000,
+      "mode": "assembled"
+    },
+    "03_rear_quarter": {
+      "origin": [
+        -0.28,
+        0.33,
+        0.29
+      ],
+      "target": [
+        0,
+        0,
+        0.014
+      ],
+      "up": [
+        0,
+        0,
+        1
+      ],
+      "fov": 30,
+      "width": 2000,
+      "height": 1600,
+      "mode": "assembled"
+    },
+    "04_exploded": {
+      "origin": [
+        0.36,
+        -0.48,
+        0.37
+      ],
+      "target": [
+        0,
+        0,
+        0.056
+      ],
+      "up": [
+        0,
+        0,
+        1
+      ],
+      "fov": 31,
+      "width": 1800,
+      "height": 2000,
+      "mode": "exploded"
+    },
+    "05_internal_supports": {
+      "origin": [
+        0.2,
+        -0.28,
+        0.42
+      ],
+      "target": [
+        0,
+        0,
+        0.012
+      ],
+      "up": [
+        0,
+        0,
+        1
+      ],
+      "fov": 30,
+      "width": 2000,
+      "height": 1600,
+      "mode": "supports"
+    }
+  },
+  "exploded_translation_mm": {
+    "lid_and_buttons": 60,
+    "stud_plate": 90,
+    "hardware_references": 22
+  }
+}

@@ -1,0 +1,417 @@
+@font-face{font-family:Cera Pro;src:url(https://assets.lego.com/fonts/v3/cera-pro/CeraPro-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Cera Pro;src:url(https://assets.lego.com/fonts/v3/cera-pro/CeraPro-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:Cera Pro;src:url(https://assets.lego.com/fonts/v3/cera-pro/CeraPro-Bold.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:Cera Pro;src:url(https://assets.lego.com/fonts/v3/cera-pro/CeraPro-Black.woff2) format("woff2");font-weight:900;font-display:swap}
+
+:root {
+  --bg: #ffffff;
+  --surface: #f5f5f5;
+  --lego-yellow: #ffcf00;
+  --lego-blue: #006db7;
+  --lego-red: #d71920;
+  --lego-navy: #201d48;
+  --ink: #202020;
+  --muted: #555555;
+  --line: #dedede;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 15px/1.6 'Cera Pro', Arial, sans-serif;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  min-height: 96px;
+  padding: 0 5%;
+  background: var(--lego-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  font-size: 15px;
+}
+
+.brand svg {
+  background: var(--lego-red);
+  stroke: #ffffff;
+  stroke-width: 2;
+  fill: none;
+  border: 2px solid #ffffff;
+  width: 44px;
+  height: 44px;
+  padding: 5px;
+  box-shadow: 0 0 0 2px var(--lego-red);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.brand small {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0;
+  font-weight: 500;
+  margin-top: 2px;
+  color: #333333;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 14px;
+  border-radius: 4px;
+  border: 2px solid var(--ink);
+  background: #ffffff;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  transition: background 0.15s, color 0.15s;
+}
+
+.nav-pill:hover {
+  background: var(--ink);
+  color: #ffffff;
+}
+
+.nav-pill.primary-pill {
+  background: var(--lego-blue);
+  color: #ffffff;
+  border-color: var(--lego-blue);
+}
+
+.nav-pill.primary-pill:hover {
+  background: #005490;
+  border-color: #005490;
+}
+
+main.story-layout {
+  flex: 1;
+  width: min(1240px, 92%);
+  margin: 0 auto;
+  padding: 32px 0 42px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 32px;
+  align-items: stretch;
+}
+
+.stage-card {
+  position: relative;
+  border-radius: 0;
+  border: 1px solid var(--line);
+  background: radial-gradient(circle at 50% 42%, #ffffff 0%, #f4f5f7 68%, #e7eaef 100%);
+  overflow: hidden;
+  min-height: 580px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stage-card canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  outline: none;
+  cursor: grab;
+}
+
+.stage-card canvas:active {
+  cursor: grabbing;
+}
+
+.stage-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: var(--lego-yellow);
+  border: 2px solid var(--ink);
+  font-size: 11px;
+  font-weight: 900;
+  color: var(--ink);
+  pointer-events: none;
+}
+
+.stage-badge i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--lego-blue);
+  display: block;
+}
+
+.stage-hint {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--line);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--muted);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.story-loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(244, 245, 247, 0.92);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+  z-index: 4;
+}
+
+.story-loading.done {
+  display: none;
+}
+
+.story-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.story-header h1 {
+  font: 900 clamp(28px, 3vw, 42px)/1.08 'Cera Pro', Arial, sans-serif;
+  letter-spacing: -0.03em;
+  margin: 6px 0 8px;
+}
+
+.story-header h1 em {
+  color: var(--lego-blue);
+  font-style: normal;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--lego-blue);
+  text-transform: uppercase;
+}
+
+.story-header p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.chapter-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--lego-yellow);
+  border-radius: 0;
+  padding: 20px 22px;
+}
+
+.chapter-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--lego-blue);
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.chapter-card h2 {
+  font: 700 22px/1.2 'Cera Pro', Arial, sans-serif;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+
+.chapter-card p {
+  margin: 0;
+  color: #333333;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.chapter-progress-bar {
+  height: 5px;
+  background: #e1e4e8;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+.chapter-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--lego-blue);
+  transition: width 0.1s linear;
+}
+
+.transport {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.transport button {
+  border: 2px solid var(--ink);
+  background: #ffffff;
+  color: var(--ink);
+  border-radius: 4px;
+  padding: 10px 14px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  min-height: 44px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.transport button:hover {
+  background: var(--ink);
+  color: #ffffff;
+}
+
+.transport button.play-btn {
+  flex: 1;
+  background: var(--lego-yellow);
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.transport button.play-btn:hover {
+  background: var(--ink);
+  color: #ffffff;
+}
+
+.chapter-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.chapter-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  padding: 10px 14px;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+  background: #ffffff;
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.chapter-item:hover {
+  background: var(--surface);
+  border-color: var(--lego-blue);
+}
+
+.chapter-item.active {
+  background: var(--surface);
+  border: 2px solid var(--lego-blue);
+}
+
+.chapter-num {
+  flex: 0 0 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #e9eef5;
+  color: var(--lego-blue);
+}
+
+.chapter-num svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.chapter-item.active .chapter-num {
+  background: var(--lego-blue);
+  color: #ffffff;
+}
+
+.chapter-item > div strong {
+  display: block;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+.chapter-item > div span {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+footer {
+  background: var(--lego-navy);
+  color: #ffffff;
+  padding: 22px 5%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 12px;
+}
+
+footer a {
+  color: var(--lego-yellow);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 960px) {
+  main.story-layout {
+    grid-template-columns: 1fr;
+  }
+  .stage-card {
+    min-height: 460px;
+  }
+}

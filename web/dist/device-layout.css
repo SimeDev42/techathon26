@@ -1,0 +1,37 @@
+/* The handheld is a fixed physical object. Only the surrounding page reflows. */
+body main{grid-template-columns:minmax(180px,1fr) 480px minmax(260px,1fr);gap:28px;max-width:1440px}
+body .device-area{width:480px;max-width:100%;min-width:0;padding:0;margin:0 auto;overflow:clip}
+body .device{box-sizing:border-box;width:400px;min-width:400px;max-width:none;margin:0;border-radius:48px 48px 54px 54px;padding:24px 27px 16px;transform:rotate(-5deg) rotateX(9deg)}
+body .top-edge{font-size:7px;letter-spacing:2px;margin:0 10px 16px}
+body .plate{grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);aspect-ratio:1;gap:4px;padding:7px;border-radius:17px;border-width:3px}
+body .tile{border-radius:8px}
+body .controls{grid-template-columns:1fr .65fr 1.2fr;gap:12px;padding:22px 5px 10px}
+body .button-cluster{gap:12px 10px;padding:0 3px}
+body .answer{height:49px;font-size:28px;border-radius:12px}
+body .scan-pad{width:57px;height:58px;font-size:7px;border-radius:14px}
+body .scan-pad svg{width:31px;height:31px}
+body .speaker{width:34px;height:34px;padding:7px;gap:4px}
+body .speaker i{width:3px;height:3px}
+body .screen-glass{padding:10px 9px;border-width:3px;border-radius:13px}
+body .screen-unit>span{font-size:6px}
+body .device-bottom{font-size:6px;letter-spacing:1.4px;padding:8px 9px 0}
+body .device-stage{box-sizing:border-box;width:478px;padding:30px 39px 45px;perspective:1100px;perspective-origin:239px 300px}
+body .device-viewport{width:100%;overflow:clip}
+body .device-caption{min-width:0;margin:0;padding:8px 20px 20px;font-size:9px;white-space:normal;flex-wrap:wrap}
+@media(max-width:600px){body .device-viewport{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;overscroll-behavior-x:contain}body .device-viewport::-webkit-scrollbar{display:none}}
+.primary:disabled,.primary:disabled:hover{background:#d9dcdf;color:#6c7278;border-color:#aeb3b7;cursor:not-allowed;opacity:.8}
+.scan-pad[aria-disabled=true]{cursor:not-allowed}
+body .station-panel .scan-hint{font-size:10px;margin:0 0 12px;line-height:1.5}
+@media(max-width:1150px){body main{grid-template-columns:480px minmax(260px,1fr)}body .intro{grid-column:1/-1;text-align:center}body .intro h1 br{display:none}body .intro-bottom{display:none}body .journey{max-width:340px;margin:0 auto;width:100%}}
+@media(max-width:820px){body main{grid-template-columns:minmax(0,1fr);padding:30px 5% 35px;gap:22px}body .intro{grid-column:auto}body .journey{max-width:400px}body .device-area{justify-self:center}body .intro h1 br{display:block}}
+
+.simulation{margin:0 0 20px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#f8f8f3}
+.map-heading{display:flex;justify-content:space-between;align-items:center;padding:13px 14px 8px;font-size:9px;letter-spacing:1px;font-weight:700}
+.map-heading strong{font-size:10px;letter-spacing:0;font-weight:500;color:var(--moss);text-transform:capitalize}
+.museum-map{display:block;width:100%;height:auto;aspect-ratio:320/220;touch-action:none;user-select:none;cursor:crosshair;color:#8d998c}
+.museum-map:focus-visible{outline:3px solid var(--moss);outline-offset:-4px}
+.map-floor{fill:#edf0e8;stroke:#b5bcae;stroke-width:2}.map-grid{opacity:.28}.map-route{fill:none;stroke:#d5dccd;stroke-width:18;stroke-linejoin:round;stroke-linecap:round}.map-display rect{fill:#d9dece;stroke:#b8c0ac;stroke-width:1}.map-display path{stroke:#a3ae99;stroke-width:2}.map-door{stroke:#f8f8f3;stroke-width:5}.map-room-label{font:7px Arial,sans-serif;fill:#858e7d;letter-spacing:1px}.return-desk{fill:#d6daca;stroke:#acb69e}.map-desk-label{font:6px Arial,sans-serif;fill:#6a765d;font-weight:bold}
+.map-signal{stroke:var(--moss);stroke-width:1;stroke-dasharray:3 4;opacity:.4;pointer-events:none}.scan-zone{fill:none;stroke:#b8bdb4;stroke-dasharray:4 4;stroke-width:1.5}.beacon-wave{fill:none;stroke:#c6cec0;stroke-width:1}.beacon-marker{fill:#c3cabb;stroke:#f8f8f3;stroke-width:2}.map-beacon text{fill:#58614e;font:700 10px Arial,sans-serif}.map-beacon .beacon-label{fill:#849077;font:700 7px Arial,sans-serif;letter-spacing:.5px}.target .scan-zone{stroke:var(--moss);fill:var(--moss);fill-opacity:.06}.target .beacon-marker{fill:var(--moss)}.target text{fill:#fff}.target .beacon-label{fill:var(--moss)}.collected .beacon-marker{fill:#348259}.collected text{fill:#fff}.collected .beacon-label{fill:#348259}
+.map-player{pointer-events:none}.player-halo{fill:#d65c36;fill-opacity:.12}.player-marker{fill:#d65c36;stroke:#fff;stroke-width:2}.map-player path{fill:none;stroke:#fff;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.map-player text{fill:#b34c2d;font:700 7px Arial,sans-serif;letter-spacing:.5px}.map-bottom{display:flex;justify-content:space-between;align-items:center;padding:8px 13px 0;gap:8px}.map-key{display:flex;align-items:center;gap:5px;font-size:9px;color:#6d7862}.map-key i{display:block;flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--moss)}.map-direction-controls{display:flex;gap:3px}.map-direction-controls button{border:1px solid #ccd0c7;border-radius:5px;background:#fff;color:#646e5a;width:27px;height:27px;padding:3px;display:grid;place-items:center}.map-direction-controls button:hover{background:#e4e9dc}.map-direction-controls svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}#map-instructions{margin:9px 13px 12px;font-size:9px;line-height:1.6;color:#7a8371}.in-range .map-heading strong{color:#168347}
+.lego-page .simulation{border-radius:0;background:#f6f6f6;border-color:#dedede}.lego-page .map-floor{fill:#f1f3f5;stroke:#bfc8d0}.lego-page .map-grid{color:#b4bec8}.lego-page .map-route{stroke:#e1e7ed}.lego-page .map-display rect,.lego-page .return-desk{fill:#dce3ea;stroke:#b9c5d0}.lego-page .map-display path{stroke:#acb9c6}.lego-page .map-door{stroke:#f6f6f6}.lego-page .target .beacon-marker{fill:#ffcf00;stroke:#202020;stroke-width:1.5}.lego-page .target text{fill:#202020}.lego-page .target .beacon-label{fill:#006db7}.lego-page .map-player text{fill:#006db7}.lego-page .player-marker,.lego-page .player-halo{fill:#006db7}.lego-page .map-key{color:#555}.lego-page #map-instructions{color:#666}.lego-page .map-direction-controls button{color:#333;border-color:#bbb;border-radius:3px}.lego-page .map-direction-controls button:hover{background:#ffcf00}.lego-page .map-key i{background:#ffcf00;border:1px solid #202020}
+@media(pointer:coarse){.map-direction-controls button{width:36px;height:36px}}

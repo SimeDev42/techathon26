@@ -1,0 +1,42 @@
+[
+  {
+    "file": "01_hero.png",
+    "resolution": [
+      2000,
+      1600
+    ],
+    "nearly_black_fraction": 8.53125e-05
+  },
+  {
+    "file": "02_top.png",
+    "resolution": [
+      1600,
+      2000
+    ],
+    "nearly_black_fraction": 0.0009803125
+  },
+  {
+    "file": "03_rear_quarter.png",
+    "resolution": [
+      2000,
+      1600
+    ],
+    "nearly_black_fraction": 0.0005534375
+  },
+  {
+    "file": "04_exploded.png",
+    "resolution": [
+      1800,
+      2000
+    ],
+    "nearly_black_fraction": 2.138888888888889e-05
+  },
+  {
+    "file": "05_internal_supports.png",
+    "resolution": [
+      2000,
+      1600
+    ],
+    "nearly_black_fraction": 5.9375e-05
+  }
+]

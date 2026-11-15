@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#ffcf00">
+  <title>The Jelling Journey — Presentation</title>
+  <link rel="stylesheet" href="deck.css">
+</head>
+<body>
+  <main class="deck-stage">
+    <section class="slide-copy" aria-live="polite">
+      <span class="slide-kicker" id="slide-kicker">PROJECT INTRODUCTION</span>
+      <h1 class="slide-title" id="slide-title">The Jelling <em>Journey.</em></h1>
+      <p class="slide-lead" id="slide-lead"></p>
+      <ul class="slide-bullets" id="slide-bullets"></ul>
+      <div class="team-grid" id="team-grid" hidden></div>
+    </section>
+
+    <section class="slide-visual" aria-label="Interactive 3D CAD handheld slide visual">
+      <div class="deck-loading" id="deck-loading">Loading 1:1 CAD assembly…</div>
+    </section>
+  </main>
+
+  <footer class="deck-controls">
+    <div class="nav-arrows">
+      <button type="button" class="arrow-btn" id="prev-slide">← Previous</button>
+      <button type="button" class="arrow-btn primary-arrow" id="next-slide">Next →</button>
+      <span class="slide-counter" id="slide-counter">1 / 8</span>
+    </div>
+
+    <div class="slide-dots" id="slide-dots" role="tablist" aria-label="Presentation slides"></div>
+
+    <div class="controls-right">
+      <a class="arrow-btn" href="index.html">Simulator</a>
+      <a class="arrow-btn" href="story.html">How it works</a>
+      <button type="button" class="arrow-btn" id="fullscreen-btn">Fullscreen (F)</button>
+    </div>
+  </footer>
+
+  <script src="vendor/three-bundle.js"></script>
+  <script src="assets/cad-meshes.js"></script>
+  <script src="deck.js"></script>
+</body>
+</html>

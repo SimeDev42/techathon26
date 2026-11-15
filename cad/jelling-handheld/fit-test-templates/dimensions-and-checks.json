@@ -1,0 +1,387 @@
+{
+  "units": "mm",
+  "carrier_thickness": 1.2,
+  "parts": [
+    {
+      "name": "01_nrf_XY_hole_frame",
+      "title": "nRF: four mounting holes",
+      "dimensions": [
+        113.1,
+        61.5,
+        1.2000000000000002
+      ],
+      "source_to_print_translation": [
+        -4.0,
+        -1.0,
+        -0.0
+      ],
+      "purpose": "XY check only",
+      "source": "User holder STEP",
+      "hole_centres": [
+        [
+          8.0,
+          5.0
+        ],
+        [
+          12.6,
+          58.5
+        ],
+        [
+          106.0,
+          5.0
+        ],
+        [
+          113.1,
+          58.5
+        ]
+      ],
+      "hole_diameter": 3.2,
+      "actual_cylindrical_hole_check": "passed",
+      "STL_watertight": true,
+      "volume_mm3": 1192.4150257016893
+    },
+    {
+      "name": "02_oled_XY_hole_frame",
+      "title": "OLED: three mounting holes",
+      "dimensions": [
+        36.5,
+        26.5,
+        1.2000000000000002
+      ],
+      "source_to_print_translation": [
+        13.2545,
+        13.25,
+        -0.0
+      ],
+      "purpose": "XY check only",
+      "source": "Seeed Eagle PCB",
+      "hole_centres": [
+        [
+          -10.0045,
+          -10.0
+        ],
+        [
+          -10.0045,
+          10.0
+        ],
+        [
+          19.9955,
+          0.0
+        ]
+      ],
+      "hole_diameter": 2.2,
+      "actual_cylindrical_hole_check": "passed",
+      "STL_watertight": true,
+      "volume_mm3": 298.2799617661721
+    },
+    {
+      "name": "03_buzzer_XY_round_holes",
+      "title": "Buzzer: nominal ROUND holes",
+      "dimensions": [
+        15.0,
+        19.0,
+        1.2000000000000002
+      ],
+      "source_to_print_translation": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "purpose": "Check approximate measurements before trying slotted mount",
+      "source": "User approximate measurements",
+      "hole_centres": [
+        [
+          2.2,
+          16.6
+        ],
+        [
+          12.8,
+          16.6
+        ]
+      ],
+      "hole_diameter": 2.0,
+      "pcb_footprint": [
+        15.0,
+        19.0
+      ],
+      "nominal_horizontal_pitch": 10.6,
+      "actual_cylindrical_hole_check": "passed",
+      "STL_watertight": true,
+      "volume_mm3": 215.66096708911115
+    },
+    {
+      "name": "04_nrf_buttons_alignment",
+      "title": "nRF + button alignment",
+      "dimensions": [
+        113.1,
+        62.942,
+        1.2000000000000002
+      ],
+      "source_to_print_translation": [
+        -4.0,
+        0.44200000000000017,
+        -0.0
+      ],
+      "purpose": "Register four mounting holes and inspect four switch/window centres",
+      "source": "Holder STEP + Nordic pick-and-place + enclosure window size",
+      "hole_centres": [
+        [
+          8.0,
+          5.0
+        ],
+        [
+          12.6,
+          58.5
+        ],
+        [
+          106.0,
+          5.0
+        ],
+        [
+          113.1,
+          58.5
+        ]
+      ],
+      "hole_diameter": 3.2,
+      "switch_centres": [
+        [
+          87.9176,
+          14.0576
+        ],
+        [
+          98.1792,
+          14.0576
+        ],
+        [
+          87.9176,
+          4.558
+        ],
+        [
+          98.1792,
+          4.558
+        ]
+      ],
+      "window_size": [
+        7.4,
+        7.4
+      ],
+      "switch_refs": [
+        "SW2 / A",
+        "SW3 / B",
+        "SW5 / C",
+        "SW6 / D"
+      ],
+      "STL_watertight": true,
+      "volume_mm3": 1332.4450549875194
+    },
+    {
+      "name": "05_oled_window",
+      "title": "OLED: front window",
+      "dimensions": [
+        31.34,
+        23.5,
+        1.2000000000000002
+      ],
+      "source_to_print_translation": [
+        15.67,
+        11.75,
+        -0.0
+      ],
+      "purpose": "Test the actual enclosure aperture over the front glass",
+      "source": "Enclosure aperture, panel size from Seeed datasheet",
+      "aperture": [
+        25.34,
+        17.5
+      ],
+      "aperture_corner_radius": 0.4,
+      "STL_watertight": true,
+      "volume_mm3": 351.8128917951865
+    },
+    {
+      "name": "06_nrf_support_height",
+      "title": "nRF: support-height test",
+      "dimensions": [
+        113.1,
+        61.5,
+        6.8
+      ],
+      "source_to_print_translation": [
+        -4.0,
+        -1.0,
+        -0.0
+      ],
+      "purpose": "Optional Z/fastener fit check",
+      "source": "Current enclosure supports",
+      "hole_centres": [
+        [
+          8.0,
+          5.0
+        ],
+        [
+          12.6,
+          58.5
+        ],
+        [
+          106.0,
+          5.0
+        ],
+        [
+          113.1,
+          58.5
+        ]
+      ],
+      "post_diameter": 6.0,
+      "post_height_above_carrier": 5.6,
+      "pilot_diameter": 2.5,
+      "pilot_depth": 5.6,
+      "STL_watertight": true,
+      "volume_mm3": 1754.3500356455643
+    },
+    {
+      "name": "07_oled_support_height",
+      "title": "OLED: support-height test",
+      "dimensions": [
+        36.5,
+        26.5,
+        20.4
+      ],
+      "source_to_print_translation": [
+        13.2545,
+        13.25,
+        -0.0
+      ],
+      "purpose": "Optional Z/fastener fit check; underside wire clearance",
+      "source": "Current enclosure supports",
+      "hole_centres": [
+        [
+          -10.0045,
+          -10.0
+        ],
+        [
+          -10.0045,
+          10.0
+        ],
+        [
+          19.9955,
+          0.0
+        ]
+      ],
+      "post_diameter": 5.0,
+      "post_height_above_carrier": 19.2,
+      "pilot_diameter": 1.6,
+      "pilot_depth": 6.0,
+      "pcb_thickness": 1.65,
+      "measured_pcb_display_stack": 4.3,
+      "STL_watertight": true,
+      "volume_mm3": 1406.6320870779036
+    },
+    {
+      "name": "08_buzzer_slotted_support",
+      "title": "Buzzer: actual slotted support",
+      "dimensions": [
+        17.0,
+        6.0,
+        7.199999999999999
+      ],
+      "source_to_print_translation": [
+        8.5,
+        3.0,
+        -0.0
+      ],
+      "purpose": "Optional fit of the actual enclosure support after checking round-hole gauge",
+      "source": "Current enclosure mount from approximate measurements",
+      "slot_centres": [
+        [
+          -5.3,
+          0
+        ],
+        [
+          5.3,
+          0
+        ]
+      ],
+      "slot_size": [
+        4.0,
+        2.4
+      ],
+      "floor_gap": 3.6,
+      "platform_thickness": 2.4,
+      "pcb_back_height_above_carrier": 6.0,
+      "STL_watertight": true,
+      "volume_mm3": 412.927323470569
+    },
+    {
+      "name": "09_LEGO_2x2_stud_fit",
+      "title": "LEGO: small stud-fit test",
+      "dimensions": [
+        15.8,
+        15.8,
+        5.0
+      ],
+      "source_to_print_translation": [
+        7.9,
+        7.9,
+        -0.0
+      ],
+      "purpose": "Check printer/material clutch fit before printing 144 studs",
+      "source": "Retained physical 3020 drawing",
+      "stud_diameter": 4.8,
+      "stud_height": 1.8,
+      "pitch": 8.0,
+      "stud_count": 4,
+      "STL_watertight": true,
+      "volume_mm3": 929.1226579957348
+    },
+    {
+      "name": "10_thickness_comparator",
+      "title": "Measured stack-height checks",
+      "dimensions": [
+        30.000000200000002,
+        49.9000002,
+        1.2000001000000002
+      ],
+      "source_to_print_translation": [
+        1e-07,
+        1e-07,
+        -0.0
+      ],
+      "purpose": "Gently compare PCB, display-stack and total buzzer thickness; no forcing",
+      "source": "User 1.65 / 4.3 / 11.7 mm measurements",
+      "slots": [
+        {
+          "gap": 1.65,
+          "from_bottom": 2,
+          "to_bottom": 3.65
+        },
+        {
+          "gap": 1.85,
+          "from_bottom": 5.65,
+          "to_bottom": 7.5
+        },
+        {
+          "gap": 4.3,
+          "from_bottom": 9.5,
+          "to_bottom": 13.8
+        },
+        {
+          "gap": 4.5,
+          "from_bottom": 15.8,
+          "to_bottom": 20.3
+        },
+        {
+          "gap": 11.7,
+          "from_bottom": 22.3,
+          "to_bottom": 34.0
+        },
+        {
+          "gap": 11.9,
+          "from_bottom": 36.0,
+          "to_bottom": 47.9
+        }
+      ],
+      "note": "+0.2 mm slots are test allowances, not revised hardware measurements",
+      "STL_watertight": true,
+      "volume_mm3": 1146.889467313181
+    }
+  ]
+}

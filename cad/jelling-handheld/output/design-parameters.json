@@ -1,0 +1,48 @@
+{
+  "width": 140.0,
+  "height": 192.0,
+  "base_height": 24.0,
+  "wall": 2.4,
+  "floor": 2.4,
+  "lid_z": 24.25,
+  "lid_thickness": 3.0,
+  "radius": 16.0,
+  "pcb_bottom_z": 8.0,
+  "board_translation": [
+    14.0,
+    129.0
+  ],
+  "oled_origin": [
+    103.0,
+    37.0
+  ],
+  "button_width": 6.8,
+  "button_clearance_per_side": 0.3,
+  "button_gap": 0.25,
+  "lego_studs": [
+    12,
+    12
+  ],
+  "lego_center": [
+    70.0,
+    124.0
+  ],
+  "lego_plate_bottom": 26.45,
+  "lego_pocket_clearance_per_side": 0.3,
+  "nfc_pad": [
+    63.0,
+    43.0,
+    25.0,
+    28.0
+  ],
+  "buzzer_footprint_center": [
+    86.5,
+    14.5
+  ],
+  "buzzer_platform_bottom": 6.0,
+  "buzzer_platform_thickness": 2.4,
+  "buzzer_slot_length": 4.0,
+  "buzzer_slot_width": 2.4,
+  "oled_glass_front_z": 25.9,
+  "oled_component_pocket_ceiling": 26.25
+}

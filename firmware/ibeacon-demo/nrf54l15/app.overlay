@@ -1,0 +1,72 @@
+#include <zephyr/dt-bindings/pinctrl/nrf-pinctrl.h>
+#include <zephyr/dt-bindings/pwm/pwm.h>
+
+/ {
+    aliases {
+        buzzer = &test_buzzer;
+    };
+    buzzer_outputs {
+        compatible = "pwm-leds";
+        test_buzzer: buzzer {
+            pwms = <&pwm20 0 PWM_HZ(2000) PWM_POLARITY_NORMAL>;
+        };
+    };
+};
+
+/* P1.14 is also wired to LED3 on the DK. Do not claim it as a GPIO LED. */
+&led3 {
+    status = "disabled";
+};
+/* Remove the board's default PWM LED consumer of PWM20 channel 0. */
+&pwm_led1 {
+    status = "disabled";
+};
+
+&pinctrl {
+    buzzer_default: buzzer_default {
+        group1 {
+            psels = <NRF_PSEL(PWM_OUT0, 1, 14)>;
+        };
+    };
+    buzzer_sleep: buzzer_sleep {
+        group1 {
+            psels = <NRF_PSEL(PWM_OUT0, 1, 14)>;
+            low-power-enable;
+        };
+    };
+};
+
+&pwm20 {
+    status = "okay";
+    pinctrl-0 = <&buzzer_default>;
+    pinctrl-1 = <&buzzer_sleep>;
+    pinctrl-names = "default", "sleep";
+};
+
+#include <zephyr/dt-bindings/pinctrl/nrf-pinctrl.h>
+#include <zephyr/dt-bindings/i2c/i2c.h>
+
+&pinctrl {
+    oled_default: oled_default {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SCL, 1, 11)>,
+                    <NRF_PSEL(TWIM_SDA, 1, 12)>;
+            bias-pull-up;
+        };
+    };
+    oled_sleep: oled_sleep {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SCL, 1, 11)>,
+                    <NRF_PSEL(TWIM_SDA, 1, 12)>;
+            low-power-enable;
+        };
+    };
+};
+
+&i2c21 {
+    status = "okay";
+    clock-frequency = <I2C_BITRATE_STANDARD>;
+    pinctrl-0 = <&oled_default>;
+    pinctrl-1 = <&oled_sleep>;
+    pinctrl-names = "default", "sleep";
+};

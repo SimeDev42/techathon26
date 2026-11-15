@@ -1,0 +1,384 @@
+@font-face{font-family:Cera Pro;src:url(https://assets.lego.com/fonts/v3/cera-pro/CeraPro-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Cera Pro;src:url(https://assets.lego.com/fonts/v3/cera-pro/CeraPro-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:Cera Pro;src:url(https://assets.lego.com/fonts/v3/cera-pro/CeraPro-Bold.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:Cera Pro;src:url(https://assets.lego.com/fonts/v3/cera-pro/CeraPro-Black.woff2) format("woff2");font-weight:900;font-display:swap}
+
+:root {
+  --bg: #ffffff;
+  --surface: #f5f5f5;
+  --lego-yellow: #ffcf00;
+  --lego-blue: #006db7;
+  --lego-red: #d71920;
+  --lego-navy: #201d48;
+  --ink: #202020;
+  --muted: #50545a;
+  --line: #dcdcdc;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.5 'Cera Pro', Arial, sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 1fr 64px;
+}
+
+:fullscreen body,
+:-webkit-full-screen body {
+  grid-template-rows: 1fr;
+}
+
+:fullscreen .deck-controls,
+:-webkit-full-screen .deck-controls {
+  display: none;
+}
+
+.deck-topbar {
+  background: var(--lego-yellow);
+  padding: 0 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 2px solid var(--ink);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+}
+
+.brand svg {
+  background: var(--lego-red);
+  stroke: #ffffff;
+  stroke-width: 2;
+  fill: none;
+  border: 2px solid #ffffff;
+  width: 36px;
+  height: 36px;
+  padding: 4px;
+  box-shadow: 0 0 0 2px var(--lego-red);
+  border-radius: 2px;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slide-counter {
+  font-size: 13px;
+  font-weight: 900;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  font-variant-numeric: tabular-nums;
+}
+
+.controls-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.top-btn {
+  border: 2px solid var(--ink);
+  background: #ffffff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 7px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.top-btn:hover {
+  background: var(--ink);
+  color: #ffffff;
+}
+
+.deck-stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: stretch;
+  gap: 3vw;
+  padding: 0 0 0 4vw;
+  background: #ffffff;
+  min-height: 0;
+  height: 100%;
+}
+
+.slide-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  max-width: 680px;
+  padding: 3vh 0;
+  z-index: 2;
+}
+
+.slide-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;
+  background: var(--lego-yellow);
+  border: 2px solid var(--ink);
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.slide-title {
+  font: 900 clamp(34px, 4.4vw, 66px)/1.03 'Cera Pro', Arial, sans-serif;
+  letter-spacing: -0.03em;
+  margin: 0;
+  color: var(--ink);
+}
+
+.slide-title em {
+  color: var(--lego-blue);
+  font-style: normal;
+}
+
+.slide-lead {
+  font-size: clamp(17px, 1.55vw, 23px);
+  line-height: 1.48;
+  color: #333333;
+  margin: 0;
+  font-weight: 500;
+}
+
+.slide-bullets {
+  margin: 4px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.slide-bullets li {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  align-items: baseline;
+  gap: 16px;
+  font-size: clamp(14px, 1.15vw, 17px);
+  color: #2b2f36;
+  background: var(--surface);
+  border-left: 5px solid var(--lego-blue);
+  padding: 10px 14px;
+}
+
+.slide-bullets li b {
+  color: var(--lego-blue);
+  font-weight: 900;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.team-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface);
+  border-left: 5px solid var(--lego-yellow);
+  padding: 12px 14px;
+}
+
+.team-avatar {
+  flex: 0 0 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--lego-blue);
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 16px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--ink);
+}
+
+.team-card strong {
+  display: block;
+  font-size: 15px;
+  color: var(--ink);
+  line-height: 1.25;
+}
+
+.team-card span {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.slide-visual {
+  position: relative;
+  height: 100%;
+  min-height: 360px;
+  border: 0;
+  background: transparent;
+  overflow: hidden;
+}
+
+.slide-visual canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  cursor: grab;
+}
+
+.slide-visual canvas:active {
+  cursor: grabbing;
+}
+
+.deck-loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(244, 245, 247, 0.92);
+  font-weight: 700;
+  font-size: 14px;
+  z-index: 3;
+}
+
+.deck-loading.done {
+  display: none;
+}
+
+.deck-controls {
+  background: var(--lego-navy);
+  color: #ffffff;
+  padding: 0 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.nav-arrows {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.arrow-btn {
+  border: 2px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.arrow-btn:hover {
+  background: var(--lego-yellow);
+  border-color: var(--lego-yellow);
+  color: var(--ink);
+}
+
+.arrow-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.arrow-btn:disabled:hover {
+  background: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.arrow-btn.primary-arrow {
+  background: var(--lego-yellow);
+  border-color: var(--lego-yellow);
+  color: var(--ink);
+}
+
+.arrow-btn.primary-arrow:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.slide-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.15s, background 0.15s, border-color 0.15s;
+}
+
+.dot-btn.active {
+  background: var(--lego-yellow);
+  border-color: var(--lego-yellow);
+  transform: scale(1.25);
+}
+
+.key-hint {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.key-hint kbd {
+  background: rgba(255, 255, 255, 0.16);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font: inherit;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  html, body { overflow: auto; height: auto; }
+  body { grid-template-rows: auto 1fr auto; }
+  .deck-stage { grid-template-columns: 1fr; padding: 24px 5%; }
+  .slide-visual { min-height: 420px; }
+  .key-hint { display: none; }
+}

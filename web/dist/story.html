@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#ffcf00">
+  <title>The Jelling Journey — How the handheld works</title>
+  <link rel="stylesheet" href="story.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 32 36" aria-hidden="true"><path d="M7 33 5 14 12 3h11l5 13-2 17ZM12 11l9 13m-9 0 9-13M16 9v19"/></svg>
+      <span>THE JELLING JOURNEY<small>A picture. A place. A story.</small></span>
+    </a>
+    <div class="header-actions">
+      <a class="nav-pill" href="deck.html">Presentation deck →</a>
+      <a class="nav-pill primary-pill" href="index.html">← Interactive simulator</a>
+    </div>
+  </header>
+
+  <main class="story-layout">
+    <section class="stage-card" aria-label="Animated 3D CAD handheld walkthrough">
+      <div class="story-loading" id="story-loading">Loading 1:1 CAD handheld…</div>
+      <div class="stage-badge"><i></i> <span id="stage-badge-text">Step 1 of 6</span></div>
+      <div class="stage-hint">Drag to orbit · Scroll to zoom · Auto-playing museum story</div>
+    </section>
+
+    <aside class="story-panel">
+      <div class="story-header">
+        <div class="eyebrow">VISITOR WALKTHROUGH</div>
+        <h1>How a visit <em>comes alive.</em></h1>
+        <p>Watch the real 1:1 CAD handheld guide a visitor from the entrance desk through the museum.</p>
+      </div>
+
+      <article class="chapter-card" aria-live="polite">
+        <div class="chapter-meta">
+          <span id="chapter-step">STEP 1 OF 6</span>
+          <span id="chapter-tag">WELCOME DESK</span>
+        </div>
+        <h2 id="chapter-title">Pick up your handheld</h2>
+        <p id="chapter-body"></p>
+        <div class="chapter-progress-bar" aria-hidden="true">
+          <div class="chapter-progress-fill" id="chapter-progress"></div>
+        </div>
+      </article>
+
+      <div class="transport">
+        <button type="button" id="prev-chapter" aria-label="Previous step">← Prev</button>
+        <button type="button" id="play-toggle" class="play-btn">Pause story</button>
+        <button type="button" id="next-chapter" aria-label="Next step">Next →</button>
+      </div>
+
+      <nav class="chapter-list" id="chapter-list" aria-label="Story chapters"></nav>
+    </aside>
+  </main>
+
+  <footer>
+    <span>1:1 CAD assembly · nRF54L15 · SSD1315 OLED · NFC · BLE</span>
+    <span><a href="index.html" style="color:inherit">Open interactive simulator →</a></span>
+  </footer>
+
+  <script src="vendor/three-bundle.js"></script>
+  <script src="assets/cad-meshes.js"></script>
+  <script src="story.js"></script>
+</body>
+</html>

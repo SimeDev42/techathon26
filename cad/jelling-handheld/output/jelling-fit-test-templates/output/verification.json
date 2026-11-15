@@ -1,0 +1,293 @@
+{
+  "status": "DRAFT / NOT RELEASED FOR FABRICATION",
+  "units": "mm",
+  "design": {
+    "width": 140.0,
+    "height": 192.0,
+    "base_height": 24.0,
+    "wall": 2.4,
+    "floor": 2.4,
+    "lid_z": 24.25,
+    "lid_thickness": 3.0,
+    "radius": 16.0,
+    "pcb_bottom_z": 8.0,
+    "board_translation": [
+      14.0,
+      129.0
+    ],
+    "oled_origin": [
+      103.0,
+      37.0
+    ],
+    "button_width": 6.8,
+    "button_clearance_per_side": 0.3,
+    "button_gap": 0.25,
+    "lego_studs": [
+      12,
+      12
+    ],
+    "lego_center": [
+      70.0,
+      124.0
+    ],
+    "lego_plate_bottom": 26.45,
+    "lego_pocket_clearance_per_side": 0.3,
+    "nfc_pad": [
+      63.0,
+      43.0,
+      25.0,
+      28.0
+    ],
+    "buzzer_footprint_center": [
+      86.5,
+      14.5
+    ],
+    "buzzer_platform_bottom": 6.0,
+    "buzzer_platform_thickness": 2.4,
+    "buzzer_slot_length": 4.0,
+    "buzzer_slot_width": 2.4,
+    "oled_glass_front_z": 25.9,
+    "oled_component_pocket_ceiling": 26.25
+  },
+  "button_positions": {
+    "A": {
+      "ref": "SW2",
+      "x": 28.0576,
+      "y": 41.08240000000001
+    },
+    "B": {
+      "ref": "SW3",
+      "x": 28.0576,
+      "y": 30.820800000000006
+    },
+    "C": {
+      "ref": "SW5",
+      "x": 18.558,
+      "y": 41.08240000000001
+    },
+    "D": {
+      "ref": "SW6",
+      "x": 18.558,
+      "y": 30.820800000000006
+    }
+  },
+  "button_pitch_mm": [
+    9.4996,
+    10.2616
+  ],
+  "geometry_checks": [
+    {
+      "name": "01_base_DRAFT",
+      "role": "designed part",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "name": "03_LEGO_12x12_plate_DRAFT",
+      "role": "designed part",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "name": "button_A_SW2_DRAFT",
+      "role": "designed part",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "name": "button_B_SW3_DRAFT",
+      "role": "designed part",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "name": "button_C_SW5_DRAFT",
+      "role": "designed part",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "name": "button_D_SW6_DRAFT",
+      "role": "designed part",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "name": "02_lid_DRAFT",
+      "role": "designed part",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "name": "REFERENCE_nRF54L15_DK_bare_PCB",
+      "role": "manufacturer PCB only",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "name": "REFERENCE_SW6_nominal_envelope",
+      "role": "envelope only; not switch shape",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "name": "REFERENCE_SW5_nominal_envelope",
+      "role": "envelope only; not switch shape",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "name": "REFERENCE_SW2_nominal_envelope",
+      "role": "envelope only; not switch shape",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "name": "REFERENCE_SW3_nominal_envelope",
+      "role": "envelope only; not switch shape",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "name": "REFERENCE_OLED_PCB_MEASURED_STACK",
+      "role": "manufacturer XY; user measured thickness and stack",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "name": "REFERENCE_OLED_panel",
+      "role": "manufacturer panel size; user measured stack sets Z",
+      "valid": true,
+      "solids": 1
+    },
+    {
+      "name": "REFERENCE_HW508_APPROXIMATE_XY_ONLY",
+      "role": "user measured footprint; approximate hole centres; PCB thickness unknown",
+      "valid": true,
+      "solids": 0
+    }
+  ],
+  "designed_part_collisions": [],
+  "modelled_PCB_and_panel_collisions": [],
+  "step_reimport_valid": true,
+  "holder_mounting_holes": [
+    {
+      "x": 8.0,
+      "y": 5.0,
+      "diameter": 3.2
+    },
+    {
+      "x": 12.6,
+      "y": 58.5,
+      "diameter": 3.2
+    },
+    {
+      "x": 106.0,
+      "y": 5.0,
+      "diameter": 3.2
+    },
+    {
+      "x": 113.1,
+      "y": 58.5,
+      "diameter": 3.2
+    }
+  ],
+  "lego_plate": {
+    "stud_count": 144,
+    "stud_grid": [
+      12,
+      12
+    ],
+    "body_size": [
+      95.8,
+      95.8,
+      3.2
+    ],
+    "pitch": 8.0,
+    "stud_diameter": 4.8,
+    "stud_height": 1.8,
+    "fasteners": [
+      [
+        30,
+        84
+      ],
+      [
+        110,
+        84
+      ],
+      [
+        30,
+        164
+      ],
+      [
+        110,
+        164
+      ]
+    ],
+    "source": {
+      "title": "LEGO 2x4 Plate Dimensions and Measurements (3020)",
+      "author": "Christoph Bartneck",
+      "date": "2019-04-22",
+      "url": "https://www.bartneck.de/wp-content/uploads/2019/04/lego-2x4-plate-dimensions-measurements-3020.pdf",
+      "retrieved": "2026-11-14",
+      "type": "Independent technical drawing, not a LEGO manufacturing specification"
+    },
+    "clutch_fit_status": "Nominal drawing geometry, physical fit not yet checked"
+  },
+  "oled_mount": {
+    "centres": [
+      [
+        92.99549999999999,
+        27.0
+      ],
+      [
+        92.99549999999999,
+        47.0
+      ],
+      [
+        122.99549999999999,
+        37.0
+      ]
+    ],
+    "pcb_back_z": 21.599999999999998,
+    "pcb_front_z": 23.249999999999996,
+    "glass_front_z": 25.9,
+    "post_height": 19.2,
+    "post_diameter": 5.0,
+    "pilot_diameter": 1.6,
+    "pilot_depth": 6.0,
+    "glass_recess_mm": 1.3500000000000014,
+    "component_pocket_clearance_mm": 0.3500000000000014,
+    "note": "Grove connector removed; soldered wires run underneath PCB"
+  },
+  "buzzer_mount": {
+    "nominal_approximate_hole_centres": [
+      [
+        81.2,
+        21.6
+      ],
+      [
+        91.8,
+        21.6
+      ]
+    ],
+    "slots_mm": [
+      4,
+      2.4
+    ],
+    "platform_top_z": 8.4,
+    "minimum_floor_gap_mm": 3.6,
+    "conservative_top_z_if_full_height_above_platform": 20.1,
+    "nominal_lid_clearance_if_full_height_above_platform": 4.15,
+    "status": "User approximate hole measurements; underside/pin fit unverified"
+  },
+  "unresolved": [
+    "Physical DK revision (holder XY used directly)",
+    "HW-508 approximate holes need fit check; pin projection and PCB thickness unknown",
+    "Soldered OLED wire routing / strain relief",
+    "Populated DK component envelope and underside clearance",
+    "Switch travel, tolerance and assembled plunger preload",
+    "Final service access, cable routing and assembly test",
+    "LEGO nominal stud clutch-fit coupon and fastener selection"
+  ]
+}

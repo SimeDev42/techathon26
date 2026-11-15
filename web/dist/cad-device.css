@@ -1,0 +1,96 @@
+/* Real 1:1 CAD 3D viewer styling (preserves DOM fallback for accessibility/tests) */
+body.cad-active .device-stage{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+  pointer-events:none;
+}
+body.cad-active .device-viewport{
+  position:relative;
+  overflow:hidden;
+}
+.cad-wrap{
+  position:relative;
+  width:100%;
+  height:540px;
+  background:radial-gradient(circle at 50% 42%, #ffffff 0%, #f1f0eb 68%, #e4e1d8 100%);
+  user-select:none;
+  touch-action:none;
+}
+.lego-page .cad-wrap{
+  background:radial-gradient(circle at 50% 42%, #ffffff 0%, #f4f5f7 68%, #e7eaef 100%);
+}
+.cad-wrap canvas{
+  display:block;
+  width:100%;
+  height:100%;
+  background:transparent;
+  image-rendering:auto;
+  aspect-ratio:auto;
+  outline:none;
+}
+.cad-loading{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  font-size:12px;
+  font-weight:500;
+  color:#5c636e;
+  background:rgba(247,247,248,.86);
+  pointer-events:none;
+  transition:opacity .25s ease;
+}
+.cad-loading.done{
+  display:none;
+}
+.cad-toolbar{
+  position:absolute;
+  left:12px;
+  right:12px;
+  bottom:12px;
+  display:flex;
+  justify-content:center;
+  gap:6px;
+  flex-wrap:wrap;
+  pointer-events:none;
+}
+.cad-btn{
+  pointer-events:auto;
+  border:1px solid rgba(32,32,32,.14);
+  background:rgba(255,255,255,.88);
+  backdrop-filter:blur(6px);
+  color:#202020;
+  font-size:11px;
+  font-weight:600;
+  padding:6px 11px;
+  border-radius:999px;
+  min-height:32px;
+  line-height:1;
+  box-shadow:0 2px 8px rgba(0,0,0,.06);
+  transition:background .15s,color .15s,border-color .15s;
+}
+.cad-btn:hover{
+  background:#ffffff;
+  border-color:rgba(32,32,32,.32);
+}
+.cad-btn.active{
+  background:#28364d;
+  color:#ffffff;
+  border-color:#28364d;
+}
+.lego-page .cad-btn.active{
+  background:#006db7;
+  border-color:#006db7;
+}
+@media(max-width:600px){
+  .cad-wrap{
+    height:460px;
+  }
+}

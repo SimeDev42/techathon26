@@ -1,0 +1,10 @@
+.ui-lab{padding-bottom:90px}
+.fixture-control{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:3px;align-items:center;max-width:calc(100vw - 20px);overflow-x:auto;white-space:nowrap;padding:5px;border:1px solid #bbb;border-radius:10px;background:#e7e7e7;box-shadow:0 2px 12px #0002;z-index:20;font:12px system-ui,sans-serif;color:#222}
+.fixture-control legend{position:absolute;width:1px;height:1px;clip:rect(0,0,0,0);overflow:hidden}
+.fixture-control label{position:relative;cursor:pointer;flex-shrink:0}
+.fixture-control input[type=radio]{position:absolute;opacity:0;width:1px;height:1px}
+.fixture-control span{display:block;padding:10px 9px;border-radius:6px}
+.fixture-control input:checked+span{background:white;box-shadow:0 1px 3px #0002}
+.fixture-control input:focus-visible+span{outline:2px solid #006db7}
+.large-text-option{padding:0 8px}
+.large-text-test{font-size:200%}

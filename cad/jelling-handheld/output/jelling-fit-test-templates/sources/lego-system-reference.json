@@ -1,0 +1,22 @@
+{
+  "units": "mm",
+  "status": "Nominal physical drawing geometry for the user-selected 12 x 12 stud plate; no printer compensation applied",
+  "stud_pitch": 8.0,
+  "stud_diameter": 4.8,
+  "stud_height": 1.8,
+  "plate_body_height": 3.2,
+  "source": {
+    "title": "LEGO 2x4 Plate Dimensions and Measurements (3020)",
+    "author": "Christoph Bartneck",
+    "date": "2019-04-22",
+    "url": "https://www.bartneck.de/wp-content/uploads/2019/04/lego-2x4-plate-dimensions-measurements-3020.pdf",
+    "retrieved": "2026-11-14",
+    "type": "Independent technical drawing, not a LEGO manufacturing specification"
+  },
+  "cross_check": {
+    "title": "LDraw File Format Specification",
+    "url": "https://www.ldraw.org/article/218",
+    "note": "Supports nominal 8 mm grid and 4.8 mm diameter. Its 1.6 mm digital stud height differs from the 1.8 mm physical plate drawing; do not silently mix these references."
+  },
+  "fabrication_note": "Printed clutch fit is unverified. Keep nominal geometry distinct from any subsequently chosen printer fit compensation."
+}

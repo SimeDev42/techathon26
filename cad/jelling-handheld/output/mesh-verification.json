@@ -1,0 +1,42 @@
+[
+  {
+    "file": "01_base_DRAFT.stl",
+    "watertight": true,
+    "positive_volume": true
+  },
+  {
+    "file": "02_lid_DRAFT.stl",
+    "watertight": true,
+    "positive_volume": true
+  },
+  {
+    "file": "03_LEGO_12x12_plate_DRAFT.stl",
+    "watertight": true,
+    "positive_volume": true
+  },
+  {
+    "file": "button_A_SW2_DRAFT.stl",
+    "watertight": true,
+    "positive_volume": true
+  },
+  {
+    "file": "button_B_SW3_DRAFT.stl",
+    "watertight": true,
+    "positive_volume": true
+  },
+  {
+    "file": "button_C_SW5_DRAFT.stl",
+    "watertight": true,
+    "positive_volume": true
+  },
+  {
+    "file": "button_D_SW6_DRAFT.stl",
+    "watertight": true,
+    "positive_volume": true
+  },
+  {
+    "file": "stud_fit_coupon_NOMINAL.stl",
+    "watertight": true,
+    "positive_volume": true
+  }
+]
